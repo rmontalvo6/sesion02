@@ -1,5 +1,7 @@
 package com.mitoscode.ejercicio6.referencias.metodos;
 
+import java.util.Arrays;
+
 public class Programa1 {
 	
 	static void referenciametodoStatic() {
@@ -19,6 +21,22 @@ public class Programa1 {
 		// simplificado
 		IOPeracion op3 = Programa1::referenciametodoStatic;
 		op3.imprimir();
+		
+		
+	
+		
+		String [] colores = {"Negro", "Azul", "Morado", "verde", "amarillo", "Anaranjado"};
+		System.out.println("colores: ");
+		
+		for (String color : colores) {
+			System.out.println(color);
+		}
+		Arrays.sort(colores, String::compareToIgnoreCase); //toma primero las minusculas ignora las mayusculas
+		System.out.println("\ncolores compareTo: ");
+
+		for (String color : colores) {
+			System.out.println(color);
+		}
 		
 	}
 
