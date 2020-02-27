@@ -79,6 +79,10 @@ public class Programa {
 		System.out.println("\nLista empleados en MAYUSCULAS");
 		lista.stream().map(e -> e.getNombres().toUpperCase()).forEach(System.out::println);
 		
+		//Nuevo
+		System.out.println("\nLista empleados en MAs 200");
+		List<Empleado> listanueva2=	lista.stream().map( e ->new Empleado(e.getNombres(), e.getSueldo() +200, e.getEdad(), e.getskill())).collect(Collectors.toList());
+		listanueva2.forEach(System.out::println);
 		
 		
 	}
